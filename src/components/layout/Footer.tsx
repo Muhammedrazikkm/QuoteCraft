@@ -2,10 +2,18 @@ import React from "react";
 import Link from "next/link";
 import { Shield, Cpu, CheckCircle, Mail, LifeBuoy, Bug } from "lucide-react";
 import { Logo } from "./Logo";
+import { AdBanner } from "@/components/ads/AdBanner";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-400">
+    <footer className="border-t border-slate-200 bg-slate-900 text-slate-400 no-print">
+      {/* ADVERTISEMENT SLOT 5: Global Pre-Footer Fluid Banner */}
+      <div className="border-b border-slate-800 bg-slate-950/60 py-4">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <AdBanner slotId="global-pre-footer" format="horizontal" />
+        </div>
+      </div>
+
       <div className="w-full px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand & Privacy Statement */}

@@ -5,6 +5,7 @@ import { useQuotationStore } from "@/store/quotationStore";
 import { STARTER_TEMPLATES } from "@/lib/templates/definitions";
 import { POPULAR_CURRENCIES } from "@/lib/formatting/currency";
 import { DEFAULT_FIELD_VISIBILITY, DocumentFieldVisibility, ItemsDisplayMode } from "@/types";
+import { AdBanner } from "@/components/ads/AdBanner";
 import {
   Building2,
   User,
@@ -1414,6 +1415,11 @@ export function SimpleEditor() {
             </div>
           </div>
         )}
+
+        {/* ADVERTISEMENT SLOT 3: Editor Bottom Utility Banner (strictly no-print) */}
+        <div className="mt-8 pt-4 border-t border-slate-100 no-print">
+          <AdBanner slotId="editor-bottom-utility" format="horizontal" />
+        </div>
       </div>
     </div>
   );

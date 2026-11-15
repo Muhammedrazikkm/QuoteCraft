@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { GUIDES_LIST, GuideArticle } from "@/lib/seo/guidesData";
 import { generateFaqSchema, generateBreadcrumbSchema, SITE_CONFIG } from "@/lib/seo/config";
+import { AdBanner } from "@/components/ads/AdBanner";
 import {
   BookOpen,
   Clock,
@@ -133,6 +134,11 @@ export default function GuideArticlePage({ params }: Props) {
         {/* Content Body */}
         <div className="prose prose-slate max-w-none text-slate-700 text-sm leading-relaxed space-y-6">
           <div className="whitespace-pre-line leading-relaxed">{article.content}</div>
+        </div>
+
+        {/* ADVERTISEMENT SLOT 4: In-Article Responsive Banner */}
+        <div className="my-8 no-print">
+          <AdBanner slotId="guide-in-article" format="horizontal" />
         </div>
 
         {/* Call to Action Banner */}

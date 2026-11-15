@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "QuoteCraft",
-  domain: "https://quotecraft.app",
+  domain: "https://quotecraft.nestmategroup.online",
   titleTemplate: "%s | QuoteCraft - Professional Quotation Maker",
   defaultTitle: "QuoteCraft — Free Online Quotation Maker & Professional PDF Generator",
   defaultDescription:

@@ -6,5 +6,5 @@ Disallow: /settings/
 Disallow: /customers/
 Disallow: /items/
 
-Sitemap: https://quotecraft.app/sitemap.xml
+Sitemap: https://quotecraft.nestmategroup.online/sitemap.xml
 

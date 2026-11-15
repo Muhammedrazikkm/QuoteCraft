@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { STARTER_TEMPLATES } from "@/lib/templates/definitions";
 import { SITE_CONFIG, generateFaqSchema } from "@/lib/seo/config";
+import { AdBanner } from "@/components/ads/AdBanner";
 import {
   PlusCircle,
   ArrowRight,
@@ -230,6 +231,13 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ADVERTISEMENT SLOT 1: Top Responsive Leaderboard */}
+        <section className="bg-slate-50/50 py-3 border-y border-slate-200/60 no-print">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <AdBanner slotId="home-top-leaderboard" format="leaderboard" />
+          </div>
+        </section>
+
         {/* CORE FEATURES SECTION */}
         <section className="py-20 bg-white border-y border-slate-200">
           <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -373,6 +381,13 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ADVERTISEMENT SLOT 2: Mid-Content Fluid Banner */}
+        <section className="bg-white py-4 border-t border-slate-200/80 no-print">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <AdBanner slotId="home-mid-content" format="horizontal" />
           </div>
         </section>
 
