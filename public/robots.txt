@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /editor/
+Disallow: /my-quotations/
+Disallow: /settings/
+Disallow: /customers/
+Disallow: /items/
+
+Sitemap: https://quotecraft.app/sitemap.xml
+

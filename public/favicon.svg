@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="qc-bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Document Fill Gradient -->
+    <linearGradient id="qc-doc" x1="120" y1="90" x2="380" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <!-- Corner Fold Gradient -->
+    <linearGradient id="qc-fold" x1="290" y1="90" x2="370" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Accent Cyan Gradient -->
+    <linearGradient id="qc-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Badge Gradient -->
+    <linearGradient id="qc-badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="qc-shadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+
+    <filter id="doc-shadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container (Squircle) -->
+  <rect width="512" height="512" rx="118" fill="url(#qc-bg)" />
+
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="4" y="4" width="504" height="504" rx="114" stroke="#ffffff" stroke-opacity="0.18" stroke-width="8" fill="none" />
+
+  <!-- Main Document Body with folded corner -->
+  <g filter="url(#doc-shadow)">
+    <!-- Document polygon: Top-left, top-right-before-fold, fold-point-down, bottom-right, bottom-left -->
+    <path d="M 148 100 
+             C 134 100 124 110 124 124 
+             L 124 388 
+             C 124 402 134 412 148 412 
+             L 364 412 
+             C 378 412 388 402 388 388 
+             L 388 184 
+             L 304 100 
+             Z" 
+          fill="url(#qc-doc)" />
+
+    <!-- Folded Corner Flap -->
+    <path d="M 304 100 
+             L 304 172 
+             C 304 178 310 184 316 184 
+             L 388 184 
+             Z" 
+          fill="url(#qc-fold)" />
+  </g>
+
+  <!-- Large Stylized Quotation Mark (Top-Left of Document) -->
+  <!-- Left Quote mark -->
+  <path d="M 166 206 
+           C 166 176 182 156 208 150 
+           L 212 162 
+           C 196 166 188 176 186 188 
+           L 204 188 
+           C 210 188 214 192 214 198 
+           L 214 220 
+           C 214 226 210 230 204 230 
+           L 176 230 
+           C 170 230 166 226 166 220 
+           Z" 
+        fill="#2563eb" />
+
+  <!-- Right Quote mark -->
+  <path d="M 226 206 
+           C 226 176 242 156 268 150 
+           L 272 162 
+           C 256 166 248 176 246 188 
+           L 264 188 
+           C 270 188 274 192 274 198 
+           L 274 220 
+           C 274 226 270 230 264 230 
+           L 236 230 
+           C 230 230 226 226 226 220 
+           Z" 
+        fill="#2563eb" />
+
+  <!-- Horizontal Itemized Rows (Representing Quote Lines) -->
+  <!-- Row 1: Primary item highlight bar -->
+  <rect x="166" y="252" width="180" height="14" rx="7" fill="#2563eb" fill-opacity="0.85" />
+
+  <!-- Row 2: Secondary item description bar -->
+  <rect x="166" y="280" width="135" height="11" rx="5.5" fill="#94a3b8" />
+  <rect x="316" y="280" width="30" height="11" rx="5.5" fill="#64748b" />
+
+  <!-- Row 3: Third line -->
+  <rect x="166" y="304" width="105" height="11" rx="5.5" fill="#94a3b8" />
+  <rect x="316" y="304" width="30" height="11" rx="5.5" fill="#64748b" />
+
+  <!-- Divider line -->
+  <line x1="166" y1="334" x2="346" y2="334" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 3" />
+
+  <!-- Total summary row -->
+  <rect x="166" y="352" width="60" height="14" rx="4" fill="#64748b" fill-opacity="0.6" />
+  <rect x="286" y="350" width="60" height="18" rx="5" fill="#0284c7" />
+
+  <!-- Verified / Approved Floating Badge (Bottom Right) -->
+  <g filter="url(#qc-shadow)">
+    <circle cx="372" cy="372" r="48" fill="url(#qc-cyan)" stroke="#ffffff" stroke-width="6" />
+    <!-- Checkmark / Pencil / Sparkle inside badge -->
+    <path d="M 354 372 L 366 384 L 392 358" 
+          stroke="#ffffff" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none" />
+  </g>
+</svg>
