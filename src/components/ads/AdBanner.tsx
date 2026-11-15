@@ -14,7 +14,7 @@ export function AdBanner({
   slotId,
   format = "horizontal",
   className = "",
-  adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID,
+  adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-6904361134310340",
   adSlot,
 }: AdBannerProps) {
   const adRef = useRef<HTMLDivElement>(null);
