@@ -30,7 +30,7 @@ export function generateSoftwareAppSchema() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "QuoteCraft",
-    image: "https://quotecraft.app/logo.svg",
+    image: `${SITE_CONFIG.domain}/logo.svg`,
     operatingSystem: "Web Browser, Windows, macOS, Linux, Android, iOS",
     applicationCategory: "BusinessApplication",
     offers: {
